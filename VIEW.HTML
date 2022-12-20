@@ -1,0 +1,12 @@
+<div>http://uptokenuk.com/stock-inventory admin@gmail.com 12345</div>
+
+CREATE VIEW subCategoryView AS SELECT categories.id, categories.categoryName, sub_categories.subCategoryName, sub_categories.subCategoryCode FROM
+categories, sub_categories WHERE categories.id = sub_categories.category_id;
+
+<br />
+CREATE VIEW productView AS 
+SELECT productstock_manages.id, productstock_manages.productName, productstock_manages.prodCode,
+categories.categoryName, sub_categories.subCategoryName, productstock_manages.prodRate, productstock_manages.stockBalance,
+productstock_manages.created_at, productstock_manages.updated_at 
+FROM productstock_manages, categories, sub_categories
+WHERE productstock_manages.catagoryID = categories.id AND productstock_manages.subCatagoryID = sub_categories.id

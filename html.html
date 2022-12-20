@@ -1,0 +1,43 @@
+
+<!-- str +="<div class="col-md-1 pt-4 text-center"></div>";
+str +="<button id="add"><i class="fa-solid fa-plus fa-1x"></i></button>";
+str +="</div>";
+str +="";
+str +="";
+str +="";
+str +="";
+str +="";
+str +=""; -->
+
+
+<div class="row" id="appendDivRow">
+<div class="col-md-1 pt-4 text-center">
+    <button id="add"><i class="fa-solid fa-plus fa-1x"></i></button>             
+</div>
+<div class="col-md-2">
+    <label>Product Code</label>
+    <input type="number" class="form-control" id="prodCode" placeholder="000abc" name="prodCode" required>
+</div>
+<div class="col-md-3">
+    <label>Product Name</label>
+    <select class="form-select text-black-50" id="productID" name="productID" required>
+        <option value="">Choose Product Name</option>
+            <?php
+            option_data('productstock_manages','id', 'productName');
+            ?> 
+    </select>
+</div>
+<div class="col-md-2">
+    <label>Product QTY</label>
+    <input type="number" class="form-control" id="prodQty" placeholder="Product QTY" name="prodQty" required>
+</div>
+<div class="col-md-2">
+    <label>Product Rate</label>
+    <input type="number" class="form-control" id="prodRate" placeholder="0.00" name="prodRate" required>
+</div>
+<div class="col-md-2">
+    <label>Total Price</label>
+    <input type="number" class="form-control" id="totalPrice" placeholder="Total Price" name="totalPrice" required>
+</div>
+
+</div>
